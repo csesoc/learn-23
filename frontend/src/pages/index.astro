@@ -1,5 +1,5 @@
 ---
-import { HomePageFactory } from "../components/factories/HomePageFactory";
+import HomePageFactory from "../components/factories/HomePageFactory.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 import type { HomePageResponse } from "../strapi";
 
@@ -10,12 +10,13 @@ const { data } = (await response.json()) as HomePageResponse;
 ---
 
 <RootLayout>
-  <h1>Home</h1>
-  {
-    data && data.attributes ? (
-      <HomePageFactory client:load blocks={data.attributes.blocks || []} />
-    ) : (
-      <p>Uh oh! Something went wrong</p>
-    )
-  }
+  <div class="p-6">
+    {
+      data && data.attributes ? (
+        <HomePageFactory blocks={data.attributes.blocks || []} />
+      ) : (
+        <p>Uh oh! Something went wrong</p>
+      )
+    }
+  </div>
 </RootLayout>

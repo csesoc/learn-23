@@ -1,9 +1,7 @@
 ---
 // This is a layout that will be used for all pages
-import type { ApiMetadataMetadata } from "../api";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import type { StrapiResponse } from "../utils";
 
 // Fetch site metadata from Strapi
 const response = await fetch(`${import.meta.env.API_URL}/api/metadata`);

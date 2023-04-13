@@ -1,0 +1,22 @@
+---
+import type { UiButton, UiHero } from "../../strapi";
+import HeroComponent from "../strapi/HeroComponent.astro";
+
+export interface Props {
+  blocks: (UiButton | UiHero | (UiButton & UiHero))[];
+}
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    switch (block.__component) {
+      case "ui.button":
+        return <button>nasddjknask</button>;
+      case "ui.hero":
+        return <HeroComponent data={block as UiHero} />;
+      default:
+        return <p>ajdnaskjn</p>;
+    }
+  })
+}
