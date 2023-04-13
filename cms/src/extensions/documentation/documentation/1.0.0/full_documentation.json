@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-04-13T02:48:32.698Z"
+    "x-generation-date": "2023-04-13T03:55:48.116Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5287,20 +5287,6 @@
           }
         }
       },
-      "UiButtonComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "text": {
-            "type": "string"
-          },
-          "iconName": {
-            "type": "string"
-          }
-        }
-      },
       "UiHero": {
         "type": "object",
         "properties": {
@@ -5315,9 +5301,6 @@
           },
           "subtitle": {
             "type": "string"
-          },
-          "callToAction": {
-            "$ref": "#/components/schemas/UiButtonComponent"
           }
         }
       },

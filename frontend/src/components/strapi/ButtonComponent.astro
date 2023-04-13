@@ -1,0 +1,16 @@
+---
+import type { UiButton } from "../../strapi";
+
+export interface Props {
+  data: UiButton;
+}
+
+const { data } = Astro.props;
+---
+
+<button
+  class="flex items-center gap-3 rounded-full bg-blue-5 px-6 py-3 font-bold"
+>
+  <span>{data.text}</span>
+  <div class={`ph-bold ph-${data.iconName}`}></div>
+</button>

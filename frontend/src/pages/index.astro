@@ -10,7 +10,7 @@ const { data } = (await response.json()) as HomePageResponse;
 ---
 
 <RootLayout>
-  <div class="p-6">
+  <div class="flex flex-col items-center gap-6 p-6">
     {
       data && data.attributes ? (
         <HomePageFactory blocks={data.attributes.blocks || []} />
