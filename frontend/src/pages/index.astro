@@ -13,7 +13,7 @@ const { data } = (await response.json()) as HomePageResponse;
   <h1>Home</h1>
   {
     data && data.attributes ? (
-      <HomePageFactory client:load />
+      <HomePageFactory client:load blocks={data.attributes.blocks || []} />
     ) : (
       <p>Uh oh! Something went wrong</p>
     )

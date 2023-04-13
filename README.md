@@ -4,19 +4,9 @@
 
 A place for the CSESoc community to learn and share their knowledge and expertise.
 
-> 🌈 **Status update:**<br> Creating a generic system for publishing course revision exercises
+> 🌈 **Status update:**<br> Migrating to using Astro and Strapi CMS.
 
 > 🎨 **Design system**:<br> CSESoc Learn has its own design system with components + tokens. The Figma file is [here](https://www.figma.com/file/l5z96D2EHE5VNz3nayZ9Ht/Design-System?node-id=11%3A4381).
-
-## Features
-
-> For more details, see the relevant [wiki page](https://github.com/csesoc/learning-platform/wiki/Architecture).
-
-- Support for a wide variety of content types via Contentlayer
-- Beautiful UI/UX inspired by Medium and technical sites
-- Spotlight-style search via Stork
-- Ergonomic content creation workflow powered by MDX
-- Convenient content sorting and filtering options
 
 ## Getting Started
 
