@@ -1,0 +1,25 @@
+---
+import type { UiFooter } from "../../strapi";
+
+export interface Props {
+  data: UiFooter;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="wrapper">
+  <p>{data.content}</p>
+</div>
+
+<style>
+  .wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: gray;
+    font-size: 1rem;
+
+    border-top: 1px solid #f4f4f4;
+  }
+</style>

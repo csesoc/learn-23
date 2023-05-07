@@ -16,7 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "ui.button",
-        "ui.hero"
+        "ui.hero",
+        "ui.footer"
       ],
       "required": false
     }
