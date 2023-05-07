@@ -113,3 +113,7 @@ exports
 dist
 build
 .strapi-updater.json
+
+
+# data.db
+data.db
