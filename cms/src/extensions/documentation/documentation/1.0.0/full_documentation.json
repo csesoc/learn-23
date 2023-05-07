@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-07T09:41:45.536Z"
+    "x-generation-date": "2023-05-07T09:59:22.345Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3943,6 +3943,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/UiHero"
+                    },
+                    {
+                      "$ref": "#/components/schemas/UiFooter"
                     }
                   ]
                 }
@@ -3969,6 +3972,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/UiHero"
+                    },
+                    {
+                      "$ref": "#/components/schemas/UiFooter"
                     }
                   ]
                 }
@@ -4288,6 +4294,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/UiHero"
+                    },
+                    {
+                      "$ref": "#/components/schemas/UiFooter"
                     }
                   ]
                 }
@@ -4640,6 +4649,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/UiHero"
+                    },
+                    {
+                      "$ref": "#/components/schemas/UiFooter"
                     }
                   ]
                 }
@@ -4959,6 +4971,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/UiHero"
+                    },
+                    {
+                      "$ref": "#/components/schemas/UiFooter"
                     }
                   ]
                 }
@@ -5300,6 +5315,20 @@
             "type": "string"
           },
           "subtitle": {
+            "type": "string"
+          }
+        }
+      },
+      "UiFooter": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "content": {
             "type": "string"
           }
         }
