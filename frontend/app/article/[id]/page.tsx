@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './styles.module.css';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ArticleContent from './ArticleContent';
 
 async function getArticle(articleId: string) {
 	const res = await fetch(
@@ -50,7 +54,9 @@ export default async function ArticlePage({
 					<span>|</span>
 					<span>{getPublishedDate()}</span>
 				</div>
-				<ReactMarkdown>{article.data.attributes.Content}</ReactMarkdown>
+				<div className={styles.content}>
+					<ArticleContent content={article.data.attributes.Content} />
+				</div>
 			</div>
 		</div>
 	);
