@@ -7,28 +7,23 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "format": "prettier --write src/ config/",
-    "format:check": "prettier --check src/ config/",
-    "lint": "yarn format:check && tsc --noEmit",
-    "postinstall": "cp .env.example .env"
+    "strapi": "strapi"
   },
-  "devDependencies": {
-    "prettier": "^2.8.4"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.9.0",
-    "@strapi/plugin-i18n": "4.8.2",
-    "@strapi/plugin-users-permissions": "4.8.2",
-    "@strapi/strapi": "4.8.2",
-    "better-sqlite3": "8.0.1",
-    "strapi-plugin-init-admin-user": "^0.2.1"
+    "@strapi/strapi": "4.13.7",
+    "@strapi/plugin-users-permissions": "4.13.7",
+    "@strapi/plugin-i18n": "4.13.7",
+    "better-sqlite3": "8.6.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "a0060bc4-12cf-44c6-8a83-9985ad9ea18a"
+    "uuid": "c160638d-6782-4324-aff9-f05224efc73f"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
