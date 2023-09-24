@@ -1,9 +1,5 @@
 import React from 'react';
 import styles from './styles.module.css';
-import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ArticleContent from './ArticleContent';
 
 async function getArticle(articleId: string) {
@@ -17,26 +13,27 @@ async function getArticle(articleId: string) {
 	return res.json();
 }
 
+const monthNames = [
+	'January',
+	'February',
+	'March',
+	'April',
+	'May',
+	'June',
+	'July',
+	'August',
+	'September',
+	'October',
+	'November',
+	'December',
+];
+
 export default async function ArticlePage({
 	params,
 }: {
 	params: { id: string };
 }) {
 	const article = await getArticle(params.id);
-	const monthNames = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December',
-	];
 	const getPublishedDate = () => {
 		const publishedDate = new Date(article.data.attributes.publishedAt);
 		return `${publishedDate.getDate()} ${
@@ -47,15 +44,15 @@ export default async function ArticlePage({
 		<div className={styles.page}>
 			<div className={styles.container}>
 				<h1 className={styles.title}>
-					{article.data.attributes.Title}
+					{article.data.attributes.title}
 				</h1>
 				<div className={styles.source}>
-					<span>John Smith</span>
+					<span>{article.data.attributes.author}</span>
 					<span>|</span>
 					<span>{getPublishedDate()}</span>
 				</div>
 				<div className={styles.content}>
-					<ArticleContent content={article.data.attributes.Content} />
+					<ArticleContent content={article.data.attributes.content} />
 				</div>
 			</div>
 		</div>

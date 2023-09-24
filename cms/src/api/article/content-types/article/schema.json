@@ -12,16 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "maxLength": 64
     },
-    "Content": {
+    "content": {
       "type": "richtext",
       "required": true
     },
-    "Media": {
+    "media": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -42,6 +43,15 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 156
     }
   }
 }
