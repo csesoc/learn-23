@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./categorySection.module.css";
 import { BlogCard } from "@/components/blog-card/BlogCard";
 
-const getCategroyArticles = async (categoryId: any) => {
+const getCategoryArticles = async (categoryId: any) => {
     const res = await fetch(
         `http://localhost:1337/api/articles?filters[category][id][$eq]=${categoryId}`,
         {
@@ -22,7 +22,7 @@ export const CategorySection = async ({
     categoryId: string;
     name: string;
 }) => {
-    const articles = await getCategroyArticles(categoryId);
+    const articles = await getCategoryArticles(categoryId);
     return (
         <div className={styles.container}>
             <h2>{name}</h2>

@@ -17,17 +17,24 @@ export default async function DiscoverPage() {
     const categories = await getCategories();
     console.log(categories);
     return (
-        <div className={styles.container}>
-            <div className={styles.articles}>
-                {categories.data.map((category: any) => {
-                    return (
-                        <CategorySection
-                            key={category.id}
-                            categoryId={category.id}
-                            name={category.attributes.name}
-                        />
-                    );
-                })}
+        <div className={styles.page}>
+            <div className={styles.container}>
+                <h1>Discover</h1>
+                <div className={styles.searchBarContainer}>
+                    <input type="text" className={styles.searchBar} />
+                    <button className={styles.filterBtn}>Filter</button>
+                </div>
+                <div className={styles.articles}>
+                    {categories.data.map((category: any) => {
+                        return (
+                            <CategorySection
+                                key={category.id}
+                                categoryId={category.id}
+                                name={category.attributes.name}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
