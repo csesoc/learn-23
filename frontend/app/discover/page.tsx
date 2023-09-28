@@ -2,6 +2,7 @@ import { BlogCard } from "@/components/blog-card/BlogCard";
 import React from "react";
 import styles from "./styles.module.css";
 import { CategorySection } from "./CategorySection";
+import SearchBar from "./SearchBar";
 
 async function getCategories() {
     const res = await fetch(`http://localhost:1337/api/categories/`, {
@@ -20,10 +21,11 @@ export default async function DiscoverPage() {
         <div className={styles.page}>
             <div className={styles.container}>
                 <h1>Discover</h1>
-                <div className={styles.searchBarContainer}>
+                {/* <div className={styles.searchBarContainer}>
+                    <SearchBar />
                     <input type="text" className={styles.searchBar} />
                     <button className={styles.filterBtn}>Filter</button>
-                </div>
+                </div> */}
                 <div className={styles.articles}>
                     {categories.data.map((category: any) => {
                         return (
