@@ -1,0 +1,33 @@
+.container {
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.articlesContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	margin-bottom: 10px;
+	width: 1005px;
+}
+
+.seeMoreBtn {
+	all: unset;
+	cursor: pointer;
+	align-self: flex-end;
+	padding: 5px 10px;
+	border-radius: 4px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(209 213 219);
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+	color: rgb(156 163 175);
+	font-size: 14px;
+}
+
+.seeMoreBtn:hover {
+	background-color: rgb(0, 0, 0, 0.025);
+}

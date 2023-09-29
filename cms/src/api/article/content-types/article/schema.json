@@ -39,11 +39,6 @@
       "target": "api::tag.tag",
       "mappedBy": "articles"
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
     "author": {
       "type": "string",
       "required": true
@@ -52,6 +47,20 @@
       "type": "text",
       "required": true,
       "maxLength": 156
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "gradient": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "shortTitle": {
+      "type": "string",
+      "required": true
     }
   }
 }

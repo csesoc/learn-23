@@ -701,17 +701,19 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'manyToMany',
       'api::tag.tag'
     >;
-    category: Attribute.Relation<
-      'api::article.article',
-      'oneToOne',
-      'api::category.category'
-    >;
     author: Attribute.String & Attribute.Required;
     description: Attribute.Text &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 156;
       }>;
+    category: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'api::category.category'
+    >;
+    gradient: Attribute.String & Attribute.Required;
+    shortTitle: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -1,6 +1,14 @@
-.container {
+.page {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+}
+
+.searchBarContainer {
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.searchBar {
+	flex: 1;
 }

@@ -1,17 +1,43 @@
-import { BlogCard } from '@/components/blog-card/BlogCard';
-import React from 'react';
-import styles from './styles.module.css';
+import { BlogCard } from "@/components/blog-card/BlogCard";
+import React from "react";
+import styles from "./styles.module.css";
+import { CategorySection } from "./CategorySection";
+import SearchBar from "./SearchBar";
 
-export default function DiscoverPage() {
-	return (
-		<div className={styles.container}>
-			<BlogCard
-				readTime={7}
-				author='John Smith'
-				gradient='linear-gradient(0deg, #82cee5 0%, #e59881 100%)'
-				blurb="This COMP1511 Cheatsheet should provide you with a quick overview of the 1511 course and its key concepts. This won't cover all the possible edgecases."
-				title='Backend Project Tutorial 1 - Creating a simple Express.js backendbackend'
-			/>
-		</div>
-	);
+async function getCategories() {
+    const res = await fetch(`http://localhost:1337/api/categories/`, {
+        cache: "no-store",
+    });
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    return res.json();
+}
+
+export default async function DiscoverPage() {
+    const categories = await getCategories();
+    console.log(categories);
+    return (
+        <div className={styles.page}>
+            <div className={styles.container}>
+                <h1>Discover</h1>
+                {/* <div className={styles.searchBarContainer}>
+                    <SearchBar />
+                    <input type="text" className={styles.searchBar} />
+                    <button className={styles.filterBtn}>Filter</button>
+                </div> */}
+                <div className={styles.articles}>
+                    {categories.data.map((category: any) => {
+                        return (
+                            <CategorySection
+                                key={category.id}
+                                categoryId={category.id}
+                                name={category.attributes.name}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    );
 }
