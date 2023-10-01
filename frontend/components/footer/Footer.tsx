@@ -18,4 +18,5 @@ async function getFooter() {
 export default async function Footer() {
     const footer = await getFooter();
     return <footer className={styles.footer}><FooterContent content={footer.data.attributes.content} /></footer>;
+    // return <footer className={styles.footer}><p>MIT Licensed • Made with ❤ by CSESoc Education</p><p>2023, Sydney</p></footer>
 }
