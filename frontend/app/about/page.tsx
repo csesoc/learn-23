@@ -18,7 +18,7 @@ export default async function AboutPage() {
 	const aboutPage = await getAboutPage();
 	return <div className={styles.page}>
 		<div className={styles.container}>
-			<h1 class={styles.title}>{aboutPage.data.attributes.title}</h1>
+			<h1 className={styles.title}>{aboutPage.data.attributes.title}</h1>
 			<AboutContent content={aboutPage.data.attributes.content} />
 		</div>
 	</div>;
