@@ -8,7 +8,7 @@ import FooterContent from './FooterContent';
 
 async function getFooter() {
 	const res = await fetch(
-		`${process.env.SERVER_ROUTE}api/footer`);
+		`${process.env.NEXT_PUBLIC_SERVER_ROUTE}api/footer`);
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
 	}
