@@ -1,0 +1,9 @@
+text: title
+About CSESoc Learn
+
+Rich text: content
+CSESoc is the official representative body of computing students at UNSW. We are one of the largest and most active societies at UNSW, and the largest computing society in the southern hemisphere. CSESoc comprises of ~10,000 UNSW students spanning across degrees in Computer Science, Software Engineering, Bioinformatics and Computer Engineering.
+
+CSESoc Learn is here to fulfil the professional technical needs of those CSE students by collaborating with presenters and content creators in the community to produce educational events and publications about useful software tools, programming concepts, and other technical topics, and host them here on our very own CSESoc Learning Platform.
+
+For any inquiries, please don't hesitate to reach out to us at [education@csesoc.org.au](mailto:education@csesoc.org.au) :D
