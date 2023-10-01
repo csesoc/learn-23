@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container::after {
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    left: 0px;
+    background: linear-gradient(rgba(9, 30, 66, 0.13) 0px, rgba(9, 30, 66, 0.13) 1px, rgba(9, 30, 66, 0.08) 1px, rgba(9, 30, 66, 0) 4px);
+    content: "";
+    color: #6B778C;
+}
+
+.footer {
+    padding: 65px;
+    text-align:center;
+    width: 100%;
+}
+
+.footer > p {
+    color: rgb(126, 134, 140);
+    height: 21px;
+    font-weight: 400;
+    
+}
