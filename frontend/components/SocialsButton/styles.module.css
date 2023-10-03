@@ -1,0 +1,29 @@
+.socialButton {
+    margin: 5px auto;
+    text-decoration: none;
+    width: 384px;
+    display: block;
+    color: #3f89f1
+}
+
+.socialButtonIn {
+    cursor: pointer;
+    width: 384px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 28px;
+    border-radius:9999px;
+    border: none;
+    align-items: center;
+}
+
+.socialButtonIn:hover {
+    -webkit-filter: brightness(95%);
+    filter: brightness(95%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}

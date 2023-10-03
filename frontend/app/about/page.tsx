@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import 'dotenv/config';
-import AboutContent from './aboutContent';
+import MarkdownRenderer from '@/components/MarkdownRenderer/MarkdownRenderer';
 
 async function getAboutPage() {
 	const res = await fetch(
@@ -19,7 +19,7 @@ export default async function AboutPage() {
 	return <div className={styles.page}>
 		<div className={styles.container}>
 			<h1 className={styles.title}>{aboutPage.data.attributes.title}</h1>
-			<AboutContent content={aboutPage.data.attributes.content} />
+			<MarkdownRenderer content={aboutPage.data.attributes.content} />
 		</div>
 	</div>;
 }

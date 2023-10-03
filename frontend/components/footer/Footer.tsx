@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 
 import 'dotenv/config'
-import FooterContent from './FooterContent';
+import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
 
 async function getFooter() {
 	const res = await fetch(
@@ -15,6 +15,6 @@ async function getFooter() {
 
 export default async function Footer() {
     const footer = await getFooter();
-    return <footer className={styles.footer}><FooterContent content={footer.data.attributes.content} /></footer>;
+    return <footer className={styles.footer}><MarkdownRenderer content={footer.data.attributes.content} /></footer>;
     // return <footer className={styles.footer}><p>MIT Licensed • Made with ❤ by CSESoc Education</p><p>2023, Sydney</p></footer>
 }

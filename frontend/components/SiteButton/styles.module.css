@@ -1,0 +1,32 @@
+.siteButton {
+    margin: 15px auto;
+    text-decoration-thickness: 0.5px;
+    width: 384px;
+    display: block;
+    color: rgb(63, 137, 241);
+    text-decoration-color: rgb(63, 137, 241);
+}
+
+.siteButtonIn {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    padding: 16px 24px;
+    margin: auto;
+    border-radius:9999px;
+    border: none;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.siteButtonIn:hover {
+    -webkit-filter: brightness(95%);
+    filter: brightness(95%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}

@@ -1,0 +1,15 @@
+# Welcome to CSESoc Learn
+
+## Where your curiosity comes to wander
+
+From articles on new technologies to sample projects, your learning outside the classroom starts here.
+
+<coolbutton link="/discover">Learn something new</coolbutton>
+
+## Join the CSESoc community
+
+Make friends with like-minded students and stay up-to-date with events.
+
+<coolbutton link="https://cseso.cc/discord/">Discord</coolbutton>
+<coolbutton link="https://www.facebook.com/csesoc/">Facebook</coolbutton>
+<coolbutton link="https://www.instagram.com/csesoc_unsw/">Instagram</coolbutton>

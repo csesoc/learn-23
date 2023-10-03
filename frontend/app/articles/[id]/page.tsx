@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import 'dotenv/config'
-import ArticleContent from './ArticleContent';
+import MarkdownRenderer from '@/components/MarkdownRenderer/MarkdownRenderer';
 
 async function getArticle(articleId: string) {
 	const res = await fetch(
@@ -53,7 +53,7 @@ export default async function ArticlePage({
 					<span>{getPublishedDate()}</span>
 				</div>
 				<div className={styles.content}>
-					<ArticleContent content={article.data.attributes.content} />
+					<MarkdownRenderer content={article.data.attributes.content} />
 				</div>
 			</div>
 		</div>
