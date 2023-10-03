@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './styles.module.css';
+import 'dotenv/config'
 import ArticleContent from './ArticleContent';
 
 async function getArticle(articleId: string) {
 	const res = await fetch(
-		`http://localhost:1337/api/articles/${articleId}?populate=*`,
+		`${process.env.SERVER_ROUTE}api/articles/${articleId}?populate=*`,
 		{ cache: 'no-store' }
 	);
 	if (!res.ok) {

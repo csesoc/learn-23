@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./categorySection.module.css";
 import { BlogCard } from "@/components/blog-card/BlogCard";
+import 'dotenv/config'
 
 const getCategoryArticles = async (categoryId: any, pagination: number) => {
     const res = await fetch(
-        `http://localhost:1337/api/articles?filters[category][id][$eq]=${categoryId}&pagination[start]=0&pagination[limit]=${pagination}&pagination[withCount]=true&sort[0]=updatedAt:desc`,
+        `${process.env.NEXT_PUBLIC_SERVER_ROUTE}api/articles?filters[category][id][$eq]=${categoryId}&pagination[start]=0&pagination[limit]=${pagination}&pagination[withCount]=true&sort[0]=updatedAt:desc`,
         {
             cache: "no-store",
         }

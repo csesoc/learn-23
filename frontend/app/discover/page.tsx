@@ -1,11 +1,12 @@
 import { BlogCard } from "@/components/blog-card/BlogCard";
 import React from "react";
+import 'dotenv/config'
 import styles from "./styles.module.css";
 import { CategorySection } from "./CategorySection";
 import SearchBar from "./SearchBar";
 
 async function getCategories() {
-    const res = await fetch(`http://localhost:1337/api/categories/`, {
+    const res = await fetch(`${process.env.SERVER_ROUTE}api/categories/`, {
         cache: "no-store",
     });
     if (!res.ok) {
