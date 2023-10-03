@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import styles from './styles.module.css';
 
@@ -8,7 +6,7 @@ import FooterContent from './FooterContent';
 
 async function getFooter() {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_SERVER_ROUTE}api/footer`);
+		`${process.env.SERVER_ROUTE}api/footer`);
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
 	}
