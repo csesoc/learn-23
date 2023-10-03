@@ -1,12 +1,21 @@
 'use client';
 
 import React from 'react';
+import {useState} from 'react'
 import styles from './styles.module.css';
 
+function MoreButton({setExpanded}: {setExpanded: Function}) {
+	return <div onClick={() => {setExpanded((state: boolean) => !state)}} className={styles.moreButton}>
+		<div className={styles.moreButtonLine}></div>
+		<div className={styles.moreButtonLine}></div>
+		<div className={styles.moreButtonLine}></div>
+	</div>
+}
+
 export default function Navbar() {
+	const [isExpanded, setExpanded] = useState(false);
 	return (
-		<div className={styles.container}>
-			<div className={styles.navbar}>
+		<header className={styles.navbar}>
 				<div className={styles.logo}>
 					<svg
 						width='19'
@@ -19,8 +28,14 @@ export default function Navbar() {
 					</svg>
 					<span>Learn</span>
 				</div>
-				<div className={styles.navigation}></div>
-			</div>
-		</div>
+				<MoreButton setExpanded={setExpanded}/>
+				<div className={isExpanded ? (styles.navigation, styles.expandedNavigation) : styles.navigation}>
+					<a href="/">Home</a>
+					<a href="/discover">Discover</a>
+					<a href="/contribute">Contribute</a>
+					<a href="/opendev">Open Dev</a>
+					<a href="/about">About</a>
+				</div>
+		</header>
 	);
 }
