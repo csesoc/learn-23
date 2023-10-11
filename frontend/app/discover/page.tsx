@@ -50,7 +50,6 @@ export default async function DiscoverPage({
 }) {
     const categories: { id: string; name: string }[] = await getCategories();
     const tags: { id: string; name: string }[] = await getTags();
-    console.log(searchParams);
 
     return (
         <div className={styles.page}>
