@@ -12,3 +12,35 @@
 .searchBar {
 	flex: 1;
 }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.filterBtn {
+	all: unset;
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
+	border: 1px solid rgb(223, 225, 228);
+	color: rgb(60, 65, 73);
+	height: fit-content;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	user-select: none;
+	font-size: 14px;
+	transition: background-color 100ms ease-in;
+	display: flex;
+	gap: 5px;
+}
+
+.filterBtn:hover {
+	background-color: rgb(0, 0, 0, 0.025);
+}
+
+
+.filterBtn:active {
+	background-color: rgb(0, 0, 0, 0.05);
+}
