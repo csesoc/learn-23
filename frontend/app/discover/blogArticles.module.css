@@ -16,7 +16,7 @@
 	all: unset;
 	cursor: pointer;
 	align-self: flex-end;
-	padding: 5px 10px;
+	padding: 4px 6px;
 	border-radius: 4px;
 
 	border-width: 1px;
@@ -25,7 +25,7 @@
 	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
 	color: rgb(156 163 175);
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .seeMoreBtn:hover {
